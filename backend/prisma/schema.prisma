@@ -33,10 +33,12 @@ model Project {
 }
 
 model Task {
-  id        Int      @id @default(autoincrement())
-  title     String
-  completed Boolean  @default(false)
-  projectId Int
-  project   Project  @relation(fields: [projectId], references: [id])
-  createdAt DateTime @default(now())
+  id             Int      @id @default(autoincrement())
+  title          String?
+  description    String
+  ai_description String?
+  completed      Boolean  @default(false)
+  projectId      Int
+  project        Project  @relation(fields: [projectId], references: [id])
+  createdAt      DateTime @default(now())
 }
