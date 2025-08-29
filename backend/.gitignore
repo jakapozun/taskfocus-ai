@@ -62,3 +62,5 @@ typings/
 
 .idea
 /src/generated/prisma
+
+TestRequest.http
